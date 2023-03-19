@@ -1,0 +1,60 @@
+form{
+background-color: rgb(32, 28, 53);
+min-width: 40%;
+color: rgb(245, 245, 245);
+padding: 15px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+height: auto;
+}
+
+label{
+font-weight: bold;
+
+}
+
+input{
+outline: none;
+border: none;
+}
+input[type='submit']{
+margin-top: 30px;
+padding: 5px;
+width: 50%;
+font-weight: bolder;
+align-self: center;
+background-color: rgb(245, 245, 245);
+color: rgb(32, 28, 53);
+border-radius: 15px;
+cursor: pointer;
+}
+
+input[type='submit']:hover{
+background-color: rgb(32, 28, 53);
+color: rgb(245, 245, 245);
+
+}
+
+input[type='date']{
+margin-top: 20px;
+width: 30%;
+
+}
+
+.tittleModalidade{
+align-self: center;
+
+}
+
+fieldset{
+display: flex;
+flex-direction: column;
+
+}
+
+
+.hide{
+display: none;
+
+}
