@@ -1,0 +1,29 @@
+.painel-escatisticas {
+  width: 500px;
+  background-color: rgb(32, 28, 53);
+  color: #fff;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.painel-escatisticas h2 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.painel-escatisticas hr {
+  color: white;
+  opacity: 0.3;
+}
+.painel-info {
+  text-transform: uppercase;
+}
+
+.painel-info h3:first-of-type {
+  color: gold;
+}
+
+.painel-info h3 {
+}

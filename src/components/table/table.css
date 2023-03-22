@@ -1,64 +1,59 @@
-table{
-border: 3px solid rgb(32, 28, 53);
-border-collapse: collapse;
-border-radius: 10px;
-
+table {
+  border: 3px solid rgb(32, 28, 53);
+  border-collapse: collapse;
+  border-radius: 10px;
 }
 
-thead tr{
-background-color: rgb(32, 28, 53);
-color: #ffffff;
+thead tr {
+  background-color: rgb(32, 28, 53);
+  color: #ffffff;
 }
 
-table tr:nth-child(even){
- background-color:  rgb(32, 28, 53);   
- color: white;
- opacity: 0.8;
+table tr:nth-child(even) {
+  background-color: rgb(32, 28, 53);
+  color: white;
+  opacity: 0.8;
 }
 
-thead th{
-padding: 5px;
-
+thead th {
+  padding: 5px;
 }
 
-tbody tr{
-border-bottom: 2px solid #a5a5a5;
-text-align: center;
-height: 30px;
-
+tbody tr {
+  border-bottom: 2px solid #a5a5a5;
+  text-align: center;
+  height: 30px;
 }
 
-tbody td{
-padding: 5px;
-
-
+tbody td {
+  padding: 5px;
 }
 
-tbody tr:hover{
-background-color:rgb(32, 28, 53);
-color: white;
-opacity: 1;
+tbody tr:hover {
+  background-color: rgb(32, 28, 53);
+  color: white;
+  opacity: 1;
 }
 
-svg{
-font-size: 1.2rem;
-margin: 2px;
-cursor: pointer;
+svg {
+  font-size: 1.2rem;
+  margin: 2px;
+  cursor: pointer;
 }
 
-.actions svg:nth-child(odd){
-color: white;
-background-color: green;
-border-radius: 12px;       
+.actions svg:nth-child(odd) {
+  color: white;
+  background-color: green;
+  border-radius: 12px;
 }
 
-.actions svg:nth-child(even){
-color: white;
-background-color: red;
-border-radius: 12px;
+.actions svg:nth-child(even) {
+  color: white;
+  background-color: red;
+  border-radius: 12px;
 }
 
-.options{
-display: flex;
-flex-direction: column;
+.options {
+  display: flex;
+  flex-direction: column;
 }
