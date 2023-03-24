@@ -11,6 +11,7 @@ const Form = ({ getBets, bets }) => {
   const [options, setOptions] = useState("");
   const [id, setId] = useState(0);
   const [valid, setValid] = useState(false);
+
   const formSubmit = () => {
     const betObj = {
       id,
@@ -30,20 +31,23 @@ const Form = ({ getBets, bets }) => {
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-      <label htmlFor="valor">Valor da Aposta: </label>
-      <input
-        type="number"
-        id="valor"
-        onChange={(e) => setValor(e.target.value)}
-      ></input>
-
-      <label htmlFor="ODD">Valor da ODD: </label>
-      <input
-        type="number"
-        id="ODD"
-        onChange={(e) => setOdd(e.target.value)}
-      ></input>
-
+      <div className="single-input">
+        <input
+          required
+          type="number"
+          id="valor"
+          onChange={(e) => setValor(e.target.value)}
+        ></input>
+        <label htmlFor="valor">Valor da Aposta</label>
+      </div>
+      <div className="single-input">
+        <input
+          type="number"
+          id="ODD"
+          onChange={(e) => setOdd(e.target.value)}
+        ></input>
+        <label htmlFor="ODD">Valor da ODD </label>
+      </div>
       <label htmlFor="modalidade">Escolha a modalidade: </label>
 
       <select
@@ -77,7 +81,7 @@ const Form = ({ getBets, bets }) => {
           modalidade === "Futebol" ? "futebolOptions" : "futebolOptions hide"
         }
       >
-        <OptionsFutebol />
+        <OptionsFutebol setOptions={setOptions} />
       </div>
 
       <input type="date" onChange={(e) => setDate(e.target.value)} />

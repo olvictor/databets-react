@@ -37,7 +37,7 @@ function App() {
         betSetGreen={betSetGreen}
         betSetRed={betSetRed}
       />
-      <Painel bets={bets} />
+      {bets.length > 0 && <Painel bets={bets} />}
     </div>
   );
 }

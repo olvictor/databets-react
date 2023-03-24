@@ -1,60 +1,113 @@
-form{
-background-color: rgb(32, 28, 53);
-min-width: 40%;
-color: rgb(245, 245, 245);
-padding: 15px;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-height: auto;
+form {
+  background-color: #d7e0ea;
+  min-width: 20%;
+  color: rgb(245, 245, 245);
+  padding: 50px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 20%;
+  position: relative;
+  min-height: 300px;
+  height: auto;
+  box-shadow: 1px 1px 1px 3px #5e7cdb;
 }
 
-label{
-font-weight: bold;
-
+form h3 {
+  color: #5e7cdb;
 }
 
-input{
-outline: none;
-border: none;
-}
-input[type='submit']{
-margin-top: 30px;
-padding: 5px;
-width: 50%;
-font-weight: bolder;
-align-self: center;
-background-color: rgb(245, 245, 245);
-color: rgb(32, 28, 53);
-border-radius: 15px;
-cursor: pointer;
+label {
+  font-weight: bold;
+  cursor: text;
+  color: black;
 }
 
-input[type='submit']:hover{
-background-color: rgb(32, 28, 53);
-color: rgb(245, 245, 245);
-
+.single-input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
-input[type='date']{
-margin-top: 20px;
-width: 30%;
-
+.single-input label {
+  position: absolute;
+  font-size: 1em;
+  font-weight: bolder;
+  width: 100%;
+  left: 5px;
+  bottom: 4px;
+  color: #382f50;
+  cursor: text;
+  transition: 0.5s ease-in-out;
+  opacity: 0.6;
 }
 
-.tittleModalidade{
-align-self: center;
-
+.single-input input {
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(245, 245, 245);
+  color: #382f50;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  border-radius: 3px;
 }
 
-fieldset{
-display: flex;
-flex-direction: column;
-
+.single-input input:focus {
+  border-bottom: 3px solid #5e7cdb;
+}
+.single-input input:focus ~ label,
+.single-input input:valid ~ label {
+  transform: translateY(-28px);
+  font-size: 12px;
+  color: #382f50;
+  font-weight: bolder;
+  opacity: 1;
 }
 
+input {
+  outline: none;
+  border: none;
+}
+input[type="submit"] {
+  margin-top: 30px;
+  padding: 5px 20px;
+  text-align: center;
+  width: 70%;
+  font-weight: bolder;
+  align-self: center;
+  background-color: rgb(245, 245, 245);
+  color: rgb(32, 28, 53);
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+}
 
-.hide{
-display: none;
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
 
+input[type="submit"]:hover {
+  background-color: rgb(32, 28, 53);
+  color: rgb(245, 245, 245);
+}
+
+input[type="date"] {
+  margin-top: 20px;
+  width: 30%;
+}
+
+.tittleModalidade {
+  align-self: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
 }
