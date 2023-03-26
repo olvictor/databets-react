@@ -1,5 +1,5 @@
 form {
-  background-color: #d7e0ea;
+  background-color: #5e7cdb;
   min-width: 20%;
   color: rgb(245, 245, 245);
   padding: 50px 20px;
@@ -11,17 +11,21 @@ form {
   position: relative;
   min-height: 300px;
   height: auto;
+  transition: 0.7s ease-in-out;
+}
+
+form:hover {
   box-shadow: 1px 1px 1px 3px #5e7cdb;
 }
 
 form h3 {
-  color: #5e7cdb;
+  color: #fff;
 }
 
 label {
   font-weight: bold;
   cursor: text;
-  color: black;
+  color: #ffffff;
 }
 
 .single-input {
@@ -37,17 +41,17 @@ label {
   width: 100%;
   left: 5px;
   bottom: 4px;
-  color: #382f50;
+  color: #5e7cdb;
   cursor: text;
   transition: 0.5s ease-in-out;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .single-input input {
   width: 100%;
   padding: 5px;
   background-color: rgb(245, 245, 245);
-  color: #382f50;
+  color: black;
   border: 0;
   outline: none;
   font-size: 16px;
@@ -55,13 +59,13 @@ label {
 }
 
 .single-input input:focus {
-  border-bottom: 3px solid #5e7cdb;
+  border-bottom: 3px solid greenyellow;
 }
 .single-input input:focus ~ label,
 .single-input input:valid ~ label {
   transform: translateY(-28px);
   font-size: 12px;
-  color: #382f50;
+  color: #ffffff;
   font-weight: bolder;
   opacity: 1;
 }
@@ -69,19 +73,24 @@ label {
 input {
   outline: none;
   border: none;
+  padding: 4px;
+  border-radius: 3px;
 }
 input[type="submit"] {
   margin-top: 30px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   text-align: center;
   width: 70%;
   font-weight: bolder;
   align-self: center;
-  background-color: rgb(245, 245, 245);
-  color: rgb(32, 28, 53);
-  border-radius: 15px;
+  background-color: #fff;
+  color: #5e7cdb;
+  border-radius: 10px;
   cursor: pointer;
   border: none;
+}
+input[type="submit"]:hover {
+  border: 1px solid green;
 }
 
 input[type="number"] {
@@ -89,14 +98,13 @@ input[type="number"] {
   appearance: textfield;
 }
 
-input[type="submit"]:hover {
-  background-color: rgb(32, 28, 53);
-  color: rgb(245, 245, 245);
-}
-
 input[type="date"] {
   margin-top: 20px;
-  width: 30%;
+  width: 50%;
+}
+
+select option:hover {
+  color: #5e7cdb;
 }
 
 .tittleModalidade {
@@ -106,6 +114,7 @@ input[type="date"] {
 fieldset {
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
 }
 
 .hide {

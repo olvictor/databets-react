@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from "react";
 
-const OptionsBasquete = ({ setOptions }) => {
+const OptionsBasquete = ({ setOptions, setConfronto }) => {
   const [timeMandante, setTimeMandante] = useState("");
   const [timeVisitante, setTimeVisitante] = useState("");
-  const [basqueteOpt1, setBasqueteOpt1] = useState("");
-  const [basqueteOpt2, setBasqueteOpt2] = useState("");
-  const [basqueteOpt3, setBasqueteOpt3] = useState("");
-  const [basqueteOpt4, setBasqueteOpt4] = useState("");
+  const [Opt1, setOpt1] = useState("");
+  const [Opt2, setOpt2] = useState("");
+  const [Opt3, setOpt3] = useState("");
+  const [Opt4, setOpt4] = useState("");
 
   useEffect(() => {
-    const bqtOptions = {
+    const timesConfronto = {
       timeMandante,
       timeVisitante,
-      basqueteOpt1,
-      basqueteOpt2,
-      basqueteOpt3,
-      basqueteOpt4,
     };
-    setOptions(bqtOptions);
+
+    setOptions([Opt1, Opt2, Opt3, Opt4]);
+    setConfronto(timesConfronto);
   }, [
     timeMandante,
     timeVisitante,
-    basqueteOpt1,
-    basqueteOpt2,
-    basqueteOpt3,
-    basqueteOpt4,
+    Opt1,
+    Opt2,
+    Opt3,
+    Opt4,
     setOptions,
+    setConfronto,
   ]);
 
   return (
@@ -47,28 +46,28 @@ const OptionsBasquete = ({ setOptions }) => {
       <input
         type="text"
         name="option1bsqt"
-        onChange={(e) => setBasqueteOpt1(e.target.value)}
+        onChange={(e) => setOpt1(e.target.value)}
       />
 
       <label htmlFor="basqueteOption2">Jogador - Assistencias</label>
       <input
         type="text"
         name="option2bsqt"
-        onChange={(e) => setBasqueteOpt2(e.target.value)}
+        onChange={(e) => setOpt2(e.target.value)}
       />
 
       <label htmlFor="basqueteOption3">Jogador - Rebotes</label>
       <input
         type="text"
         name="option3bsqt"
-        onChange={(e) => setBasqueteOpt3(e.target.value)}
+        onChange={(e) => setOpt3(e.target.value)}
       />
 
       <label htmlFor="basqueteOption4">Jogador - Triplos Conseguidos</label>
       <input
         type="text"
         name="option4bsqt"
-        onChange={(e) => setBasqueteOpt4(e.target.value)}
+        onChange={(e) => setOpt4(e.target.value)}
       />
     </fieldset>
   );

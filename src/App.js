@@ -7,7 +7,6 @@ import Table from "./components/table/table";
 
 function App() {
   const [bets, setBets] = useState([]);
-
   const getBets = (betObj) => {
     setBets([...bets, betObj]);
   };

@@ -39,13 +39,12 @@ export default function Table({ bets, betDelete, betSetGreen, betSetRed }) {
               <td>{bet.lucro + " R$"}</td>
               <td>{bet.modalidade}</td>
               <td className="options">
-                <span>{bet.options.basqueteOpt1}</span>
-                <span>{bet.options.basqueteOpt2}</span>
-                <span>{bet.options.basqueteOpt3}</span>
-                <span>{bet.options.basqueteOpt4}</span>
+                {bet.options.map((option) => (
+                  <span>{option}</span>
+                ))}
               </td>
               <td>
-                {bet.options.timeMandante + " x " + bet.options.timeVisitante}
+                {bet.confronto.timeMandante} X {bet.confronto.timeVisitante}
               </td>
               <td className="actions">
                 <BiCheckCircle onClick={() => betSetGreen(bet)} />

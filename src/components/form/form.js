@@ -8,10 +8,21 @@ const Form = ({ getBets, bets }) => {
   const [odd, setOdd] = useState("");
   const [date, setDate] = useState("");
   const [modalidade, setModalidade] = useState("");
-  const [options, setOptions] = useState("");
+  const [options, setOptions] = useState([]);
   const [id, setId] = useState(0);
-  const [valid, setValid] = useState(false);
-
+  const [msg, setMsg] = useState("");
+  const [confronto, setConfronto] = useState("");
+  const validForm = () => {
+    if (valor === "") {
+      alert("Digite o valor da Aposta");
+      return false;
+    }
+    if (odd === "") {
+      alert("Preencha a odd");
+      return false;
+    }
+    formSubmit();
+  };
   const formSubmit = () => {
     const betObj = {
       id,
@@ -20,6 +31,7 @@ const Form = ({ getBets, bets }) => {
       retorno: valor * odd,
       lucro: valor * odd - valor,
       modalidade,
+      confronto,
       options,
       status: undefined,
       date,
@@ -27,6 +39,7 @@ const Form = ({ getBets, bets }) => {
 
     setId(id + 1);
     getBets(betObj);
+    console.log(betObj);
   };
 
   return (
@@ -36,14 +49,18 @@ const Form = ({ getBets, bets }) => {
           required
           type="number"
           id="valor"
+          value={valor || ""}
           onChange={(e) => setValor(e.target.value)}
         ></input>
+
         <label htmlFor="valor">Valor da Aposta</label>
       </div>
       <div className="single-input">
         <input
+          required
           type="number"
-          id="ODD"
+          value={odd || ""}
+          id="odd"
           onChange={(e) => setOdd(e.target.value)}
         ></input>
         <label htmlFor="ODD">Valor da ODD </label>
@@ -73,7 +90,7 @@ const Form = ({ getBets, bets }) => {
           modalidade === "Basquete" ? "basqueteOptions" : "basqueteOptions hide"
         }
       >
-        <OptionsBasquete setOptions={setOptions} />
+        <OptionsBasquete setOptions={setOptions} setConfronto={setConfronto} />
       </div>
 
       <div
@@ -81,14 +98,14 @@ const Form = ({ getBets, bets }) => {
           modalidade === "Futebol" ? "futebolOptions" : "futebolOptions hide"
         }
       >
-        <OptionsFutebol setOptions={setOptions} />
+        <OptionsFutebol setOptions={setOptions} setConfronto={setConfronto} />
       </div>
 
       <input type="date" onChange={(e) => setDate(e.target.value)} />
       <input
         type="submit"
         value="Adicionar aposta"
-        onClick={() => formSubmit()}
+        onClick={() => validForm()}
       />
     </form>
   );

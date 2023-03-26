@@ -1,12 +1,12 @@
-header{
-background-color: rgb(32, 28, 53);
-display: flex;
-height: 100px;
-width: 100%;
-justify-content: center;
+header {
+  background-color: #5e7cdb;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
 }
 
-header h1{
-color:  rgb(245, 245, 245);
-font-weight: bolder;
+header h1 {
+  color: rgb(245, 245, 245);
+  font-weight: bolder;
 }
