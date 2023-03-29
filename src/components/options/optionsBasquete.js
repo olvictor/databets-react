@@ -29,19 +29,19 @@ const OptionsBasquete = ({ setOptions, setConfronto }) => {
 
   return (
     <fieldset>
+      <label htmlFor="timeMandante">Time Mandante</label>
       <input
         type="text"
         name="timeMandantebsqt"
         value={timeMandante}
         onChange={(e) => setTimeMandante(e.target.value)}
       />
-      <label htmlFor="timeMandante">Time Mandante</label>
+      <label htmlFor="timeVisitante">Time Visitante</label>
       <input
         type="text"
         name="timeVisitantebsqt"
         onChange={(e) => setTimeVisitante(e.target.value)}
       />
-      <label htmlFor="timeVisitante">Time Visitante</label>
       <label htmlFor="basqueteOption1">Jogador - Pontos</label>
       <input
         type="text"

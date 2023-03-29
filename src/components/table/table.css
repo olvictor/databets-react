@@ -1,18 +1,20 @@
 table {
-  border: 3px solid rgb(32, 28, 53);
+  border: 3px solid #41b883;
   border-collapse: collapse;
   border-radius: 10px;
+  background-color: antiquewhite;
+  color: black;
 }
 
 thead tr {
-  background-color: rgb(32, 28, 53);
+  background-color: #41b883;
   color: #ffffff;
 }
 
 table tr:nth-child(even) {
-  background-color: rgb(32, 28, 53);
-  color: white;
+  background-color: #41b883;
   opacity: 0.8;
+  color: #fff;
 }
 
 thead th {

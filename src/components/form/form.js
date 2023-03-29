@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import OptionsBasquete from "../options/optionsBasquete";
 import OptionsFutebol from "../options/optionsFutebol";
 import "./form.css";
+import { BiFootball } from "react-icons/bi";
 
 const Form = ({ getBets, bets }) => {
   const [valor, setValor] = useState("");
@@ -39,40 +40,38 @@ const Form = ({ getBets, bets }) => {
 
     setId(id + 1);
     getBets(betObj);
-    console.log(betObj);
   };
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-      <div className="single-input">
-        <input
-          required
-          type="number"
-          id="valor"
-          value={valor || ""}
-          onChange={(e) => setValor(e.target.value)}
-        ></input>
+      <label htmlFor="valor">Valor da Aposta </label>
+      <input
+        type="number"
+        id="valor"
+        value={valor || ""}
+        required
+        onChange={(e) => setValor(e.target.value)}
+      ></input>
 
-        <label htmlFor="valor">Valor da Aposta</label>
-      </div>
-      <div className="single-input">
-        <input
-          required
-          type="number"
-          value={odd || ""}
-          id="odd"
-          onChange={(e) => setOdd(e.target.value)}
-        ></input>
-        <label htmlFor="ODD">Valor da ODD </label>
-      </div>
+      <label htmlFor="ODD">Valor da ODD </label>
+      <input
+        type="number"
+        value={odd || ""}
+        id="odd"
+        onChange={(e) => setOdd(e.target.value)}
+        required
+      ></input>
       <label htmlFor="modalidade">Escolha a modalidade: </label>
 
       <select
         htmlFor="modalidade"
         id="modalidade"
         onChange={(e) => setModalidade(e.target.value)}
+        defaultValue="-1"
       >
-        <option value="-1">Modalidade</option>
+        <option disabled value="-1">
+          Selecione a Modalidade
+        </option>
         <option value="Futebol">Futebol</option>
         <option value="Basquete">Basquete</option>
         <option value="Tênis">Tênis</option>
@@ -104,7 +103,7 @@ const Form = ({ getBets, bets }) => {
       <input type="date" onChange={(e) => setDate(e.target.value)} />
       <input
         type="submit"
-        value="Adicionar aposta"
+        value="Registrar aposta"
         onClick={() => validForm()}
       />
     </form>

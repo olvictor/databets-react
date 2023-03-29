@@ -8,6 +8,7 @@ export default function Table({ bets, betDelete, betSetGreen, betSetRed }) {
   return (
     <>
       {bets.length < 1 && <h2> Não existem apostas registradas </h2>}
+
       <table className={bets.length < 1 ? "hide" : ""}>
         <thead>
           <tr>
@@ -40,7 +41,7 @@ export default function Table({ bets, betDelete, betSetGreen, betSetRed }) {
               <td>{bet.modalidade}</td>
               <td className="options">
                 {bet.options.map((option) => (
-                  <span>{option}</span>
+                  <span key={option}>{option}</span>
                 ))}
               </td>
               <td>

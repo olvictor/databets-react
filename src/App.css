@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
   background-color: rgb(245, 245, 245);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -11,7 +14,4 @@ body {
   margin: 0 auto;
   align-items: center;
   gap: 100px;
-}
-body {
-  background-color: #fff;
 }
